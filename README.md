@@ -1,5 +1,12 @@
 # Aabel HList Rust Library
 
+[![CI](https://github.com/veminovici/aabel-hlist-rs/workflows/CI/badge.svg)](https://github.com/veminovici/aabel-hlist-rs/actions)
+[![Crates.io](https://img.shields.io/crates/v/aabel-hlist-rs.svg)](https://crates.io/crates/aabel-hlist-rs)
+[![Documentation](https://docs.rs/aabel-hlist-rs/badge.svg)](https://docs.rs/aabel-hlist-rs)
+[![License: MIT OR Apache-2.0](https://img.shields.io/badge/License-MIT%20OR%20Apache--2.0-blue.svg)](https://opensource.org/licenses/MIT)
+[![Rust](https://img.shields.io/badge/rust-1.70+-orange.svg)](https://www.rust-lang.org)
+[![no_std](https://img.shields.io/badge/no__std-yes-blue.svg)](https://github.com/rust-lang/rfcs/blob/master/text/1180-std-optional.md)
+
 A Rust library for working with heterogeneous lists (HLists).
 
 ## Overview
@@ -33,7 +40,7 @@ aabel-hlist-rs = "0.1.0"
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/aabel-hlist-rs.git
+   git clone https://github.com/veminovici/aabel-hlist-rs.git
    cd aabel-hlist-rs
    ```
 
