@@ -1,7 +1,7 @@
 # Aabel HList Rust Library Makefile
 # Provides convenient commands for development and CI
 
-.PHONY: help check fmt clippy test build clean all install-tools
+.PHONY: help check fmt clippy test build clean all install-tools install-hooks setup
 
 # Default target
 help:
@@ -14,12 +14,23 @@ help:
 	@echo "  clean     - Clean build artifacts"
 	@echo "  all       - Run fmt, clippy, and test"
 	@echo "  install-tools - Install required development tools"
+	@echo "  install-hooks - Install git pre-commit hooks"
+	@echo "  setup     - Setup complete development environment"
 
 # Install development tools
 install-tools:
 	@echo "Installing development tools..."
 	cargo install cargo-make
 	cargo install cargo-audit
+
+# Install git hooks
+install-hooks:
+	@echo "Installing git hooks..."
+	./scripts/install-hooks.sh
+
+# Setup development environment
+setup: install-tools install-hooks
+	@echo "Development environment setup complete!"
 
 # Run all pre-commit validations
 check: fmt clippy test

@@ -49,6 +49,30 @@ aabel-hlist-rs = "0.1.0"
    cargo install cargo-make
    ```
 
+3. Install git hooks (optional but recommended):
+   ```bash
+   make install-hooks
+   # or
+   ./scripts/install-hooks.sh
+   ```
+
+   Or setup the complete development environment:
+   ```bash
+   make setup
+   ```
+
+### Git Hooks
+
+The project includes a pre-commit hook that automatically runs validation checks before each commit:
+
+- **Code formatting** - Ensures code follows Rust formatting standards
+- **Clippy lints** - Catches common Rust issues and style problems
+- **Tests** - Runs all tests to ensure nothing is broken
+- **Compilation** - Verifies the code compiles successfully
+- **Security audit** - Checks for known vulnerabilities (if cargo-audit is installed)
+
+The hook will prevent commits if any validation fails, helping maintain code quality.
+
 ### Development Commands
 
 The project includes a Makefile with common development tasks:
