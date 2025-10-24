@@ -1,5 +1,8 @@
 # Cursor Rules for Rust Projects
 
+## Github Context
+- github user name is veminovici
+
 ## Project Context
 This is a Rust library project for heterogeneous lists (HLists). The project uses:
 - Rust edition 2021
