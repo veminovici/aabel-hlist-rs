@@ -1,0 +1,18 @@
+[package]
+name = "aabel-hlist-rs"
+version = "0.1.0"
+edition = "2021"
+authors = ["Your Name <your.email@example.com>"]
+description = "A Rust library for heterogeneous lists"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/yourusername/aabel-hlist-rs"
+keywords = ["hlist", "heterogeneous", "list", "functional"]
+categories = ["data-structures", "no-std"]
+
+[dependencies]
+
+[dev-dependencies]
+
+[lib]
+name = "aabel_hlist_rs"
+path = "src/lib.rs"

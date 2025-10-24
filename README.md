@@ -1,0 +1,118 @@
+# Aabel HList Rust Library
+
+A Rust library for working with heterogeneous lists (HLists).
+
+## Overview
+
+This library provides type-safe operations on heterogeneous lists, allowing you to work with lists containing elements of different types while maintaining compile-time type safety.
+
+## Features
+
+- Type-safe heterogeneous list operations
+- Compile-time type checking
+- Zero-cost abstractions
+- `no_std` compatible
+
+## Usage
+
+Add this to your `Cargo.toml`:
+
+```toml
+[dependencies]
+aabel-hlist-rs = "0.1.0"
+```
+
+## Development
+
+### Prerequisites
+
+- Rust 1.70+ (stable, beta, or nightly)
+- `cargo-make` (for development tasks)
+
+### Setup
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/aabel-hlist-rs.git
+   cd aabel-hlist-rs
+   ```
+
+2. Install development dependencies:
+   ```bash
+   cargo install cargo-make
+   ```
+
+### Development Commands
+
+The project includes a Makefile with common development tasks:
+
+```bash
+# Run all pre-commit validations
+make check
+
+# Format code
+make fmt
+
+# Run clippy lints
+make clippy
+
+# Run tests
+make test
+
+# Build the project
+make build
+
+# Run all checks (fmt, clippy, test)
+make all
+```
+
+### Manual Commands
+
+You can also run the commands directly with cargo:
+
+```bash
+# Format code
+cargo fmt
+
+# Run clippy
+cargo clippy
+
+# Run tests
+cargo test
+
+# Build
+cargo build
+
+# Build with all features
+cargo build --all-features
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Make your changes
+4. Run the pre-commit checks (`make check`)
+5. Commit your changes (`git commit -m 'Add some amazing feature'`)
+6. Push to the branch (`git push origin feature/amazing-feature`)
+7. Open a Pull Request
+
+## License
+
+This project is licensed under either of
+
+- Apache License, Version 2.0, ([LICENSE-APACHE](LICENSE-APACHE) or http://www.apache.org/licenses/LICENSE-2.0)
+- MIT license ([LICENSE-MIT](LICENSE-MIT) or http://opensource.org/licenses/MIT)
+
+at your option.
+
+## Status
+
+This project is in early development. The API is not yet stable and may change between versions.
+
+## Changelog
+
+### 0.1.0
+- Initial release
+- Basic project structure
+- CI/CD pipeline setup

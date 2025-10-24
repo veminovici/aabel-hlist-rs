@@ -1,0 +1,142 @@
+# Cursor Rules for Rust Projects
+
+## Project Context
+This is a Rust library project for heterogeneous lists (HLists). The project uses:
+- Rust edition 2021
+- Standard library features
+- `no_std` compatibility
+- Comprehensive testing and linting
+
+## Code Style and Conventions
+
+### General Rust Guidelines
+- Follow Rust naming conventions (snake_case for variables/functions, PascalCase for types)
+- Use `cargo fmt` for consistent formatting
+- Prefer explicit types over type inference when it improves readability
+- Use `clippy` lints and address all warnings
+- Write comprehensive documentation with `///` for public APIs
+- Use `//!` for module-level documentation
+
+### Error Handling
+- Prefer `Result<T, E>` over panicking
+- Use `?` operator for error propagation
+- Implement `Display` and `Debug` for custom error types
+- Use `anyhow` for application errors, `thiserror` for library errors
+
+### Testing
+- Write unit tests in the same file as the code being tested
+- Use integration tests in `tests/` directory
+- Include doc tests in documentation
+- Test both success and failure cases
+- Use `#[cfg(test)]` for test-only code
+
+### Performance
+- Prefer zero-cost abstractions
+- Use `const` functions where possible
+- Consider `no_std` compatibility
+- Profile before optimizing
+- Use `cargo bench` for benchmarking
+
+### Memory Management
+- Prefer borrowing over cloning when possible
+- Use `Cow` for flexible string handling
+- Consider `Box` for large structs
+- Use `Rc`/`Arc` for shared ownership when needed
+
+## Project-Specific Guidelines
+
+### HList Implementation
+- Focus on type safety and compile-time guarantees
+- Use trait bounds and associated types effectively
+- Consider using macros for ergonomic APIs
+- Ensure zero-cost abstractions
+- Document type-level operations clearly
+
+### API Design
+- Design for ergonomics and type safety
+- Use builder patterns for complex construction
+- Provide both safe and unsafe APIs when appropriate
+- Include comprehensive examples in documentation
+- Version APIs carefully
+
+## Development Workflow
+
+### Pre-commit Checks
+Always run before committing:
+```bash
+make check  # Runs fmt, clippy, and test
+```
+
+### Code Organization
+- Keep modules focused and cohesive
+- Use `pub use` for re-exports
+- Organize tests logically
+- Separate concerns into different modules
+
+### Documentation
+- Write clear, concise documentation
+- Include usage examples
+- Document panics and errors
+- Use markdown formatting in doc comments
+- Keep documentation up to date
+
+## Common Patterns
+
+### Generic Programming
+- Use trait bounds effectively
+- Consider using associated types
+- Implement traits for generic types
+- Use where clauses for complex bounds
+
+### Macros
+- Use declarative macros for repetitive code
+- Consider procedural macros for complex code generation
+- Document macro behavior clearly
+- Test macros thoroughly
+
+### Unsafe Code
+- Minimize unsafe code usage
+- Document safety invariants
+- Use `unsafe` blocks sparingly
+- Test unsafe code extensively
+
+## Tools and Dependencies
+
+### Required Tools
+- `cargo-make` for development tasks
+- `cargo-audit` for security auditing
+- `cargo-tarpaulin` for code coverage (optional)
+
+### Common Dependencies
+- `serde` for serialization
+- `thiserror` for error types
+- `anyhow` for error handling
+- `criterion` for benchmarking
+
+## File Organization
+- Keep `lib.rs` focused on public API
+- Use separate modules for different functionality
+- Place tests near the code they test
+- Use `examples/` for usage examples
+- Keep `benches/` for benchmarks
+
+## Git Workflow
+- Use conventional commits
+- Keep commits atomic
+- Write descriptive commit messages
+- Use feature branches
+- Require CI to pass before merging
+
+## Performance Considerations
+- Profile before optimizing
+- Use `cargo bench` for micro-benchmarks
+- Consider memory usage patterns
+- Test with different input sizes
+- Document performance characteristics
+
+## Security
+- Run `cargo audit` regularly
+- Keep dependencies up to date
+- Avoid unsafe code when possible
+- Validate all inputs
+- Document security considerations
